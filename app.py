@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, send_file
 from PIL import Image, ImageDraw
 import io
 from inference_sdk import InferenceHTTPClient
-
+import os
 app = Flask(__name__)
 
 # Initialize the inference client
