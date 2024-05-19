@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify, send_file
 from PIL import Image, ImageDraw
 import io
 from inference_sdk import InferenceHTTPClient
-import os
 app = Flask(__name__)
 
 # Initialize the inference client
@@ -68,6 +67,6 @@ def upload():
         return send_file(img_io, mimetype='image/jpeg')
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 10000))
+    port = 10000
     app.run(host='0.0.0.0', port=port)
 
